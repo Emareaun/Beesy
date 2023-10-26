@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import BlogDescription from './BlogDescription'; // Import the BlogDescription component
+import BlogDescription from './BlogDescription'; // BlogDescription component
 
 const BlogPage = () => {
-  // Sample data for demonstration
+  
   const initialBlogs = [
     {
       id: 1,
@@ -16,5 +16,25 @@ const BlogPage = () => {
       description: 'Description for Blog 2',
       imageUrl: 'image2.jpg',
     },
-    // Add blog objects
+    
   ];
+  const [blogs, setBlogs] = useState(initialBlogs);
+
+  useEffect(() => {
+
+    //  fetchBlogsFromBackend().then((data) => setBlogs(data));
+  }, []);
+
+  return (
+    <div className="blog-page">
+      <h2>Blog Page</h2>
+      <div className="blog-list">
+        {blogs.map((blog) => (
+          <BlogDescription key={blog.id} blog={blog} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default BlogPage;
