@@ -1,6 +1,6 @@
 const mongoose = require('mongoose'); 
 
-const mongoURI = 'mongodb://localhost:27017/your-database-name'; // mongo uri
+const mongoURI = 'mongodb://localhost:27017/Beesy'; // mongo uri
 const express = require('express');
 const app = express();
 const blogRoutes = require('./routes/blogRoutes'); 
