@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const mongoURI = 'mongodb://localhost:27017/your-database-name'; // mongo uri
+
 const express = require('express');
 const app = express();
 const blogRoutes = require('./routes/blogRoutes'); 
@@ -12,19 +12,6 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
-mongoose.connect(mongoURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
-const db = mongoose.connection;
-
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-db.once('open', () => {
-  console.log('Connected to MongoDB');
-});
-
-const mongoose = require('mongoose');
 
 const blogSchema = new mongoose.Schema({
   title: String,
