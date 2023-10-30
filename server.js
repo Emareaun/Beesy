@@ -1,4 +1,5 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'); 
+
 const mongoURI = 'mongodb://localhost:27017/your-database-name'; // mongo uri
 const express = require('express');
 const app = express();
@@ -23,8 +24,6 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', () => {
   console.log('Connected to MongoDB');
 });
-
-const mongoose = require('mongoose');
 
 const blogSchema = new mongoose.Schema({
   title: String,
