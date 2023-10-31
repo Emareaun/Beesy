@@ -1,11 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
-const PORT = process.env.PORT || 3000;
 
-app.use(express.json()); 
+const mongoURI = 'mongodb+srv://emareaun12345:<Leftnut007>@cluster0.ee5bojf.mongodb.net/?retryWrites=true&w=majority';
 
-mongoose.connect('mongodb://localhost:27017/Beesy', {
+mongoose.connect(mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -17,8 +16,7 @@ db.once('open', () => {
   console.log('Connected to MongoDB');
 });
 
-app.use('/api', require('./routes/blogRoutes')); 
-
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
