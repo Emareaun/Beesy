@@ -13,4 +13,4 @@ router.post('/blogs', async (req, res) => {
   }
 });
 
-
+module.exports = router;
