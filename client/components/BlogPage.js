@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { useQuery } from '@apollo/client';
-import { GET_BLOGS } from './graphql/queries'; 
+import React from 'react';
 
 const BlogPage = () => {
-  const { loading, error, data } = useQuery(GET_BLOGS); 
+  return (
+    <div className="blog-page">
+      <h2>Blog Page</h2>
+      <div className="blog-list">
+        {}
+      </div>
+    </div>
+  );
+};
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
-
-  const blogs = data.blogs; 
+export default BlogPage;
