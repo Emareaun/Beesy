@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import LandingPage from './components/LandingPage'; 
-import Login from './components/Login'; 
-import Signup from './components/Signup'; 
+import Login from './components/login'; 
+import Signup from './components/signup'; 
 
 function App() {
   return (
