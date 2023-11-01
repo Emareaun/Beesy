@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
   return (
@@ -14,7 +15,12 @@ const LandingPage = () => {
       <section>
         <h2>Join Us Today</h2>
         <p>Create an account to start sharing your blogs with the world.</p>
-        <a href="/signup">Sign Up</a>
+        <Link to="/login">
+          <button>Login</button>
+        </Link>
+        <Link to="/signup">
+          <button>Sign Up</button>
+        </Link>
       </section>
     </div>
   );
